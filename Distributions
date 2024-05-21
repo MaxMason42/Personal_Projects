@@ -2,7 +2,7 @@ import numpy as np
 import math
 
 class Binomial:
-  def __init__(self, n, p)
+  def __init__(self, n, p):
     self.n = n
     self.p = p
   def prob(self, k):
