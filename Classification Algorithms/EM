@@ -4,8 +4,10 @@ import math
 
 def poisson(x, lmbda):
   return (lmbda ** x) * np.exp(-lmbda) / np.math.factorial(x)
+
 def gaussian(x, mu, sigma):
   return (1/(sigma * np.sqrt(2 * math.pi))) * np.exp(-0.5 * ((x - mu)/sigma)**2)
+
 def uniform(x, a, b):
   if a > b:
     raise Exception("b must be greater than a.")
@@ -13,4 +15,6 @@ def uniform(x, a, b):
     return 1 / (b - a)
   else:
     return 0
-def 
+
+def inverse_gaussian(x, lmbda, mu):
+  return np.sqrt(lmbda / (2 * math.pi * x**3)) * np.exp(-((lmbda(x - mu)**2)/(2 * mu**2 * x)))
