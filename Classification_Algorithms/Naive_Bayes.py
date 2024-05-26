@@ -1,5 +1,5 @@
 
-from Distributions import Gaussian, Binomial, Multinomial
+from Personal_Projects.Distributions import Gaussian, Binomial, Multinomial
 import numpy as np
 import math
 
