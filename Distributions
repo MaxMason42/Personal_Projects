@@ -8,6 +8,12 @@ class Binomial:
   def prob(self, k):
     return math.comb(self.n, k) * self.p**k * (1-self.p)**(self.n-k)
 
+class Multinomial:
+    def __init__(self, outcomes_probs):
+        self.outcomes_probs = outcomes_probs
+    def prob(self, X):
+        return self.outcomes_probs[X]
+
 class Poisson:
   def __init__(self, lmbda):
     self.lmbda = lmbda
